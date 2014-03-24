@@ -17,6 +17,8 @@ main = xmonad $ defaultConfig
         `additionalKeysP`
         [ ("M1-S-<Up>", spawn "setxkbmap us")
         , ("M1-S-<Down>", spawn "setxkbmap gr")
+        , ("M-S-g", spawn "google-chrome")
+        , ("M-S-e", spawn "emacs")
         ]
         
 layout = (spacing 7 $ Tall 1 (3/100) (1/2)) ||| noBorders Full

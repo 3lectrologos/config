@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+mv xmonad.desktop /usr/share/xsessions/xmonad.desktop

@@ -8,3 +8,6 @@
 !.xmonad/
 .xmonad/*
 !.xmonad/xmonad.hs
+!.xmonad.start
+!.customconfig/
+!.customconfig/*
