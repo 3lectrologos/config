@@ -1,0 +1,10 @@
+*
+/*/
+!.gitignore
+!.emacs
+!.emacs.d/
+.emacs.d/*
+!.emacs.d/zenburn.el
+!.xmonad/
+.xmonad/*
+!.xmonad/xmonad.hs
