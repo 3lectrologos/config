@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+# Identify the home of our gtkrc file, important for setting styles of 
+# gtk-based applications
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
+
+# Load X resources (fixes some font issues)
+xrdb -merge .Xresources
+
+# Start compositing to support transparency. You can omit this
+# if you prefer not to use any transparency, but it is likely to cause
+# ugly black fringing with some programs such as synapse that expect
+# transparency support.
+xcompmgr -n &
+
+# Activate primary screen 
+xrandr --output DP-0 --auto --primary
+
+# If we find that a screen is connected via DVI, activate it and position it
+# to the left of the primary screen.
+xrandr --output DP-2 --auto --left-of DP-0
+
+# To set your backgrounds, run nitrogren /path/to/images
+nitrogen --restore &
+
+# Now, finally, start xmonad
+exec xmonad

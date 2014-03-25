@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-xrdb -merge .Xresources
-
-gnome-settings-daemon &
-exec xmonad
